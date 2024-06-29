@@ -13,7 +13,7 @@ def json_data(path):
 
 @app.route('/')
 def hello_world():
-    return render_template("home.html", jobs=data)
+    return render_template("home.html", jobs=json_data(json_path))
 
 
 @app.route('/api/jobs')
